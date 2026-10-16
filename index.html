@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSafe Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <span class="brand-icon">🛡️</span>
+            <span>CyberSafe Checker</span>
+        </div>
+        <span class="version">STUDENT EDITION</span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">YOUR CYBERSECURITY TOOLKIT</p>
+            <h1>Stay safe in the <span>digital world.</span></h1>
+            <p class="subtitle">
+                Check suspicious links and understand your password
+                strength with simple, helpful guidance.
+            </p>
+        </section>
+
+        <section class="tools-grid">
+            <article class="tool-card">
+                <div class="tool-icon link-icon">🔗</div>
+                <h2>Phishing Link Checker</h2>
+                <p class="description">
+                    Inspect a URL for suspicious patterns and
+                    learn why it might be risky.
+                </p>
+
+                <form id="url-form" novalidate>
+                    <label for="url-input">Website URL</label>
+                    <input
+                        type="text"
+                        id="url-input"
+                        placeholder="https://example.com"
+                        autocomplete="url"
+                        spellcheck="false"
+                    >
+
+                    <button type="submit" class="primary-button">
+                        Analyze Link
+                    </button>
+                </form>
+
+                <div id="url-result" class="result" role="status"
+                     aria-live="polite" hidden></div>
+            </article>
+
+            <article class="tool-card">
+                <div class="tool-icon password-icon">🔐</div>
+                <h2>Password Strength Meter</h2>
+                <p class="description">
+                    Check password strength and get tips to
+                    make it harder to guess.
+                </p>
+
+                <form id="password-form" novalidate>
+                    <label for="password-input">Your password</label>
+                    <input
+                        type="password"
+                        id="password-input"
+                        placeholder="Enter a test password"
+                        autocomplete="new-password"
+                    >
+
+                    <div class="meter-track" aria-hidden="true">
+                        <div id="strength-bar" class="meter-fill"></div>
+                    </div>
+                    <p id="strength-label" class="strength-label">
+                        Strength: Not checked
+                    </p>
+
+                    <button type="submit" class="primary-button">
+                        Check Strength
+                    </button>
+                </form>
+
+                <div id="password-result" class="result"
+                     role="status" aria-live="polite" hidden></div>
+
+                <p class="privacy-note">
+                    🔒 This tool is designed to check passwords locally.
+                    Use a test password, not a real account password.
+                </p>
+            </article>
+        </section>
+
+        <section class="notice">
+            <span aria-hidden="true">💡</span>
+            <p>
+                <strong>Security tip:</strong>
+                Never enter your password on an untrusted website.
+                A link checker cannot guarantee that a website is safe.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        CyberSafe Checker · Educational cybersecurity project
+    </footer>
+</body>
+</html>

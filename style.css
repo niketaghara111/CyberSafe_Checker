@@ -1,0 +1,272 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #e8eef8;
+    background: #0b1120;
+    font-synthesis: none;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at top, #182847 0%, #0b1120 58%);
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 7%;
+    border-bottom: 1px solid #253149;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.brand-icon {
+    font-size: 26px;
+}
+
+.version {
+    color: #9fb5d6;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.container {
+    width: min(100% - 36px, 1000px);
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 62px 0 36px;
+}
+
+.eyebrow {
+    color: #6ee7b7;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.15;
+    margin: 18px 0;
+}
+
+h1 span {
+    color: #73a9ff;
+}
+
+.subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #aab8ce;
+    line-height: 1.7;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tool-card {
+    padding: 26px;
+    background: rgba(20, 31, 51, 0.94);
+    border: 1px solid #2b3b56;
+    border-radius: 18px;
+    min-width: 0;
+}
+
+.tool-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 23px;
+}
+
+.link-icon {
+    background: #17345a;
+}
+
+.password-icon {
+    background: #263657;
+}
+
+h2 {
+    margin: 20px 0 10px;
+    font-size: 21px;
+}
+
+.description {
+    color: #aab8ce;
+    line-height: 1.6;
+    min-height: 50px;
+}
+
+label {
+    display: block;
+    margin: 22px 0 9px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+    background: #0b1425;
+    color: #f3f6fc;
+    border: 1px solid #3b4c68;
+    border-radius: 9px;
+    font: inherit;
+    outline: none;
+}
+
+input::placeholder {
+    color: #74849d;
+}
+
+input:focus {
+    border-color: #73a9ff;
+    box-shadow: 0 0 0 3px rgba(115, 169, 255, 0.15);
+}
+
+.primary-button {
+    width: 100%;
+    margin-top: 16px;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: #3979e7;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #4a89f3;
+}
+
+.primary-button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.meter-track {
+    height: 7px;
+    margin-top: 18px;
+    background: #303d53;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.meter-fill {
+    width: 0;
+    height: 100%;
+    background: #64748b;
+    border-radius: inherit;
+    transition: width 0.25s ease;
+}
+
+.strength-label {
+    color: #aab8ce;
+    font-size: 12px;
+}
+
+.result {
+    margin-top: 16px;
+    padding: 13px;
+    background: #101d31;
+    border: 1px solid #344762;
+    border-radius: 9px;
+    line-height: 1.6;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.result[hidden] {
+    display: none;
+}
+
+.privacy-note {
+    color: #9fb5d6;
+    font-size: 11px;
+    line-height: 1.6;
+    margin-top: 17px;
+}
+
+.notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 24px 0 40px;
+    padding: 17px;
+    border: 1px solid #46523c;
+    border-radius: 12px;
+    background: #1a241d;
+    color: #cbd7c8;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.notice p {
+    margin: 0;
+}
+
+footer {
+    padding: 22px;
+    border-top: 1px solid #253149;
+    text-align: center;
+    color: #8493aa;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        padding: 17px 20px;
+    }
+
+    .brand {
+        font-size: 16px;
+    }
+
+    .version {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+    .hero {
+        padding: 42px 0 28px;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-card {
+        padding: 21px;
+    }
+
+    .description {
+        min-height: 0;
+    }
+}
